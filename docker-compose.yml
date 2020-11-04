@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  mywebsite:
+    container_name: mywebsite
+    image: mywebsite
+    ports:
+      - 8080:80
+  
+  mywebsite2:
+    container_name: mywebsite2
+    image: mywebsite2
+    ports:
+      - 9090:80
+
+  myproxy:
+    container_name: myproxy
+    image: myproxy
+    ports:
+      - 80:80
+    tty: true
